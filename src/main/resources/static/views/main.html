@@ -1,0 +1,15 @@
+<form>
+    Name: <input type="text" ng-model="subject.name"/><br/>
+    Number: <input type="text" ng-model="subject.nr"/><br/>
+    Measurement:  <input type="radio" ng-model="subject.measurement" value="1" />1
+    <input type="radio" ng-model="subject.measurement" value="2" />2<br />
+    Disorder: <input type="radio" ng-model="subject.disorder" value="social" />Social
+    <input type="radio" ng-model="subject.disorder" value="GAD" />GAD
+    <input type="radio" ng-model="subject.disorder" value="specific" />Specific<br/>
+
+    <label ng-show="subject.disorder=='specific'" ng-repeat="(specific,enabled) in specifics">
+        <input type="checkbox" ng-model="subject.specifics[specific]"> {{specific}}
+    </label>
+    <br/>
+    <input type="submit" ng-click="startTrial(subject)" value="Start" />
+</form>
