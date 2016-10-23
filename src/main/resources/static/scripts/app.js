@@ -16,9 +16,12 @@ app.config(function($routeProvider) {
 	}).when('/login', {
     	templateUrl : 'views/login.html',
     	controller : 'loginCtrl',
-    }).when('/task', {
-          	templateUrl : 'views/task.html',
-          	controller : 'taskCtrl',
+    }).when('/candidate', {
+          	templateUrl : 'views/candidate.html',
+          	controller : 'candidateCtrl',
+    }).when('/instruction', {
+              	templateUrl : 'views/instruction.html',
+              	controller : 'instructionCtrl',
     }).otherwise({
       	redirectTo : '/login'
     });

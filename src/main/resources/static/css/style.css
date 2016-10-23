@@ -113,6 +113,10 @@ input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
     margin: 14px 38px -9px;
 }
 
+.text{
+    margin: 30px;
+}
+
 /*
 #responsive-form{
 	max-width:600px */
