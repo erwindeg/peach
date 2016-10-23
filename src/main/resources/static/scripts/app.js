@@ -16,6 +16,9 @@ app.config(function($routeProvider) {
 	}).when('/login', {
     	templateUrl : 'views/login.html',
     	controller : 'loginCtrl',
+    }).when('/task', {
+          	templateUrl : 'views/task.html',
+          	controller : 'taskCtrl',
     }).otherwise({
       	redirectTo : '/login'
     });

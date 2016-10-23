@@ -9,21 +9,27 @@ h1 {
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
-form {
+form{
   box-sizing: border-box;
-  width: 260px;
+  width: 50%;
   margin: 100px auto 0;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
   padding-bottom: 40px;
   border-radius: 3px;
 }
+
+form.login{
+  width: 260px;
+}
+
+
 form h1 {
   box-sizing: border-box;
   padding: 20px;
 }
 
 input {
-  margin: 40px 25px;
+  margin: 25px 25px;
   width: 200px;
   display: block;
   border: none;
@@ -38,6 +44,10 @@ input {
   background-repeat: no-repeat;
   color: #0e6252;
 }
+input.login {
+  margin: 40px 25px;
+}
+
 input:focus, input:valid {
   box-shadow: none;
   outline: none;
@@ -59,8 +69,12 @@ button {
   padding: 6px;
   width: 200px;
   color: white;
-  margin-left: 25px;
+  margin: 40px 25px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+button.login{
+  margin-left: 25px;
 }
 button:hover {
   -webkit-transform: translateY(-3px);
@@ -78,3 +92,33 @@ input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
           transform: translateY(-20px);
   visibility: visible !important;
 }
+
+.col-half{
+    	float: left;
+    	position: relative;
+    	padding: 0.65rem;
+    	width:50%;
+    	-webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#gender {
+    margin: 14px 38px -9px;
+}
+
+/*
+#responsive-form{
+	max-width:600px */
+/*-- change this to get your desired form width --*//*
+;
+	margin:0 auto;
+    width:100%;
+}
+*/

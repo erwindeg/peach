@@ -1,0 +1,38 @@
+<form>
+    <div id="responsive-form" class="clearfix">
+        <h1>Candidate information</h1>
+        <div class="col-half">
+            <input placeholder="Number" type="number" required="">
+        </div>
+        <div class="col-half">
+            <div id="gender">
+                <img src="img/male.svg" ng-show="candidate.gender=='male'" height="75" width="75"/>
+                <img src="img/male-off.svg" ng-show="candidate.gender!='male'" ng-click="setGender('male')" height="75 "
+                     width="75"/>
+                <img src="img/female.svg" ng-show="candidate.gender=='female'" height="75" width="75"/>
+                <img src="img/female-off.svg" ng-show="candidate.gender!='female'" ng-click="setGender('female')"
+                     height="75"
+                     width="75"/>
+            </div>
+        </div>
+        <div class="col-half">
+            <input placeholder="Location" type="text" required="">
+        </div>
+        <div class="col-half">
+            <input placeholder="Disorder" type="number" required="">
+        </div>
+        <div class="col-half">
+            <input placeholder="Age" type="number" required="">
+        </div>
+        <div class="col-half">
+            <input placeholder="Type" type="number" required="">
+        </div>
+        <div class="col-half">
+
+        </div>
+        <div class="col-half">
+            <button ng-click="login()">Submit</button>
+        </div>
+    </div>
+    </div>
+</form>
