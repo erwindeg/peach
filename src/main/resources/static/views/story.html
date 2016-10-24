@@ -1,6 +1,6 @@
 <form>
     <div id="responsive-form" class="clearfix">
-        <h1>Story title {{story}}</h1>
+        <h1>Story title {{story.id}}</h1>
         <div class="text clearfix">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -8,11 +8,22 @@
             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
         </div>
+        <div ng-show="showAnswers" class="answers-container">
+            <ul class="answers">
+                <li class="answer"><label><input type="radio" ng-model="story.answer" value="1">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label></li>
+                <li class="answer"><label><input type="radio" ng-model="story.answer" value="2">Sed do eiusmod tempor incididunt ut labore et</label></li>
+                <li class="answer"><label><input type="radio" ng-model="story.answer" value="3">Ut enim ad minim veniam, quis nostrud exercitation ullamo</label></li>
+                <li class="answer"><label><input type="radio" ng-model="story.answer" value="4">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit</label></li>
+            </ul>
+        </div>
         <div class="col-half">
             &nbsp;
         </div>
-        <div class="col-half">
+        <div class="col-half" ng-show="!showAnswers">
             <button ng-click="start()" class="text-button">Start</button>
+        </div>
+        <div class="col-half" ng-show="showAnswers">
+            <button ng-click="answer()" class="text-button">Answer</button>
         </div>
     </div>
 </form>

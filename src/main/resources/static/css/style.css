@@ -194,6 +194,19 @@ input[type="radio"] {
         margin: 40px 80px;
 }
 
+.answer-container{
+        margin-top: 70px;
+}
+
+.answers {
+    list-style:none;
+    padding-left:0;
+}​
+
+.answer {
+    height: 30px;
+}
+
 /*
 #responsive-form{
 	max-width:600px */

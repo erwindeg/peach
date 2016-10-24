@@ -24,6 +24,12 @@ app.config(function($routeProvider, $translateProvider) {
     }).when('/story/:id', {
             templateUrl : 'views/story.html',
             controller : 'storyCtrl',
+    }).when('/break/:id', {
+            templateUrl : 'views/break.html',
+            controller : 'storyCtrl',
+    }).when('/end', {
+                  templateUrl : 'views/end.html',
+                  controller : 'storyCtrl',
     }).otherwise({
       	redirectTo : '/login'
     });
