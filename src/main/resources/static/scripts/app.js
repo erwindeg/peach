@@ -7,13 +7,10 @@
  * 
  * Main module of the application.
  */
-var app = angular.module("peachModule", [ 'ngRoute', 'ngResource' ]);
+var app = angular.module("peachModule", [ 'ngRoute', 'ngResource', 'pascalprecht.translate', 'ngAnimate']);
 
-app.config(function($routeProvider) {
-	$routeProvider.when('/main', {
-		templateUrl : 'views/main.html',
-		controller : 'mainCtrl',
-	}).when('/login', {
+app.config(function($routeProvider, $translateProvider) {
+	$routeProvider.when('/login', {
     	templateUrl : 'views/login.html',
     	controller : 'loginCtrl',
     }).when('/candidate', {
@@ -25,6 +22,11 @@ app.config(function($routeProvider) {
     }).otherwise({
       	redirectTo : '/login'
     });
+    $translateProvider.useStaticFilesLoader({
+    				  prefix: '/languages/',
+    				  suffix: '.json'
+    				});
+    $translateProvider.preferredLanguage('en');
 });
 
 app.controller("mainCtrl", function($scope,$http) {

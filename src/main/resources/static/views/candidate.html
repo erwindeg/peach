@@ -2,30 +2,25 @@
     <div id="responsive-form" class="clearfix">
         <h1>Candidate information</h1>
         <div class="col-half">
-            <input placeholder="Number" type="number" required="">
+            <div class="gender">
+                <label><input type="radio" ng-model="candidate.gender" value="male">Male</label>
+                <label><input type="radio" ng-model="candidate.gender" value="female">Female</label>
+            </div>
         </div>
         <div class="col-half">
-            <div id="gender">
-                <img src="img/male.svg" ng-show="candidate.gender=='male'" height="75" width="75"/>
-                <img src="img/male-off.svg" ng-show="candidate.gender!='male'" ng-click="setGender('male')" height="75 "
-                     width="75"/>
-                <img src="img/female.svg" ng-show="candidate.gender=='female'" height="75" width="75"/>
-                <img src="img/female-off.svg" ng-show="candidate.gender!='female'" ng-click="setGender('female')"
-                     height="75"
-                     width="75"/>
-            </div>
+            <input placeholder="Number" type="number" required="">
         </div>
         <div class="col-half">
             <input placeholder="Location" type="text" required="">
         </div>
         <div class="col-half">
-            <input placeholder="Disorder" type="number" required="">
+            <input placeholder="Disorder" type="text" required="">
         </div>
         <div class="col-half">
             <input placeholder="Age" type="number" required="">
         </div>
         <div class="col-half">
-            <input placeholder="Type" type="number" required="">
+            <input placeholder="Type" type="text" required="">
         </div>
         <div class="col-half">
 

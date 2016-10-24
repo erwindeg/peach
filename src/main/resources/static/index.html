@@ -6,12 +6,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.12.1/angular-translate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.12.1/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.min.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/loginCtrl.js"></script>
     <script src="scripts/candidateCtrl.js"></script>
     <script src="scripts/instructionCtrl.js"></script>
+    <script src="scripts/translateCtrl.js"></script>
 </head>
 <body>
+<header>
+    <div class="header-container">
+        <div class="language-container" ng-controller="translateCtrl">
+            <div class="language-select">
+                <a ng-click="showLanguageList = !showLanguageList" ng-show="selectedLanguage=='en'"><img  src="img/english-flag.png" alt="English flag" class="flag" translate="EN"><span class="language">EN</span><span class="arrow">&#x25BC;</span></a>
+                <a ng-click="showLanguageList = !showLanguageList" ng-show="selectedLanguage=='de'"><img  src="img/german-flag.png" alt="German flag" class="flag" translate="DE"><span class="language">DE</span><span class="arrow">&#x25BC;</span></a>
+                <a ng-click="showLanguageList = !showLanguageList" ng-show="selectedLanguage=='nl'"><img  src="img/dutch-flag.png" alt="Dutch flag" class="flag" translate="NL"><span class="language">NL</span><span class="arrow">&#x25BC;</span></a>
+            </div>
+                <ul class="language-list" ng-show="showLanguageList">
+                <li class="language-item"><a ng-click="changeLanguage('en')"><img  src="img/english-flag.png" alt="English flag" class="flag" translate="EN"><span class="language">ENGLISH (EN)</span></a></li>
+                <li class="language-item"><a ng-click="changeLanguage('de')"><img  src="img/german-flag.png" alt="German flag" class="flag" translate="DE"><span class="language">DEUTCH (DE)</span></a></li>
+                <li class="language-item"><a ng-click="changeLanguage('nl')"><img  src="img/dutch-flag.png" alt="Dutch flag" class="flag" translate="NL"><span class="language">NEDERLANDS (NL)</span></a></li>
+            </ul>
+        </div>
+    </div>
+</header>
 <section>
     <div ng-view=""></div>
 </section>
