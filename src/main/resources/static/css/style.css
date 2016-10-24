@@ -108,6 +108,7 @@ input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
         box-sizing: border-box
 }
 
+
 .clearfix:after {
 	content: "";
 	display: table;
