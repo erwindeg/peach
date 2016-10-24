@@ -97,6 +97,7 @@ input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
   visibility: visible !important;
 }
 
+
 .col-half{
     	float: left;
     	position: relative;
