@@ -17,8 +17,13 @@ app.config(function($routeProvider, $translateProvider) {
           	templateUrl : 'views/candidate.html',
           	controller : 'candidateCtrl',
     }).when('/instruction', {
-              	templateUrl : 'views/instruction.html',
-              	controller : 'instructionCtrl',
+            templateUrl : 'views/instruction.html',
+            controller : 'instructionCtrl',
+    }).when('/story', {
+            redirectTo : '/story/1'
+    }).when('/story/:id', {
+            templateUrl : 'views/story.html',
+            controller : 'storyCtrl',
     }).otherwise({
       	redirectTo : '/login'
     });

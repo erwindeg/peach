@@ -18,7 +18,7 @@ form{
   width: 50%;
   margin: 100px auto 0;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
-  padding-bottom: 40px;
+  padding-bottom: 10px;
   border-radius: 3px;
 }
 
@@ -101,6 +101,7 @@ input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
     	float: left;
     	position: relative;
     	padding: 0.65rem;
+    	padding-right: 1.8rem;
     	width:50%;
     	-webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -185,6 +186,10 @@ input[type="radio"] {
 
 .language-item:hover{
     background: #444649;
+}
+
+.text-button{
+        margin: 40px 80px;
 }
 
 /*
