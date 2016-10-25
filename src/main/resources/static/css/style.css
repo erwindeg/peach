@@ -208,6 +208,14 @@ input[type="radio"] {
        float: right;
 }
 
+
+@media (max-width: 400px) {
+     .text-button{
+         margin-right: 20%;
+     }
+}
+
+
 .answer-container{
         margin-top: 70px;
 }

@@ -16,14 +16,11 @@
                 <li class="answer"><label><input type="radio" ng-model="story.answer" value="4">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit</label></li>
             </ul>
         </div>
-        <div class="col-half">
-            &nbsp;
-        </div>
-        <div class="col-half" ng-show="!showAnswers">
-            <button ng-click="start()" class="text-button">Start</button>
-        </div>
-        <div class="col-half" ng-show="showAnswers">
-            <button ng-click="answer()" class="text-button">Answer</button>
+
+            <button ng-show="!showAnswers" ng-click="start()" class="text-button">Start</button>
+
+
+            <button ng-show="showAnswers" ng-click="answer()" class="text-button">Answer</button>
         </div>
     </div>
 </form>
