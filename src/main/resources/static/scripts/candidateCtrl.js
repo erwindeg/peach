@@ -1,13 +1,15 @@
-app.controller("candidateCtrl", function($scope,$http,$location) {
-    $scope.candidate = {};
-    $scope.candidate.gender = 'male';
+app.controller("candidateCtrl", function($scope,$http,$location,$localStorage) {
+    $scope.candidate =  $localStorage.candidate;
+    if ( $scope.candidate == null ||  $scope.candidate === undefined) {
+         $scope.candidate ={};
+    }
+
     $scope.setGender = function(gender){
         $scope.candidate.gender = gender;
     }
 
      $scope.save = function(){
-            //send credentials to server
-            //on success, navigate to main.
+            $localStorage.candidate = $scope.candidate;
             $location.path("/instruction");
      }
 });

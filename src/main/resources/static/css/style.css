@@ -166,6 +166,17 @@ input[type="radio"] {
     cursor:pointer;
 }
 
+.candidate-container{
+    position: absolute;
+    top: 5px;
+    left: 5%;
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+}
+.candidate-image{
+    vertical-align: middle;
+}
+
 .language-container {
     font-family: "Helvetica Neue";
 }

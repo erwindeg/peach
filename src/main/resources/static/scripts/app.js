@@ -7,7 +7,7 @@
  * 
  * Main module of the application.
  */
-var app = angular.module("peachModule", [ 'ngRoute', 'ngResource', 'pascalprecht.translate', 'ngAnimate']);
+var app = angular.module("peachModule", [ 'ngRoute', 'ngResource', 'pascalprecht.translate', 'ngAnimate','ngStorage']);
 
 app.config(function($routeProvider, $translateProvider) {
 	$routeProvider.when('/login', {

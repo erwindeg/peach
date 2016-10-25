@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.12.1/angular-translate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.12.1/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/loginCtrl.js"></script>
     <script src="scripts/candidateCtrl.js"></script>
@@ -20,6 +21,10 @@
 <body>
 <header>
     <div class="header-container">
+        <div class="candidate-container" ng-controller="candidateCtrl">
+            <img src="img/boy.svg" ng-show="candidate.gender=='male'" height="25" class="candidate-image"> <img src="img/girl.svg" ng-show="candidate.gender=='female'" height="25" class="candidate-image">
+            {{candidate.number}}
+        </div>
         <div class="language-container" ng-controller="translateCtrl">
             <div class="language-select">
                 <a ng-click="showLanguageList = !showLanguageList" ng-show="selectedLanguage=='en'"><img  src="img/english-flag.png" alt="English flag" class="flag" translate="EN"><span class="language">EN</span><span class="arrow">&#x25BC;</span></a>
