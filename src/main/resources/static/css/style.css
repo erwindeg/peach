@@ -191,7 +191,8 @@ input[type="radio"] {
 }
 
 .text-button{
-        margin: 40px 80px;
+       /* margin: 40px 80px;*/
+       float: right;
 }
 
 .answer-container{
