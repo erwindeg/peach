@@ -107,7 +107,6 @@ input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
 
 
 .col-half{
-    	float: left;
     	position: relative;
     	padding: 0.65rem;
     	padding-right: 1.8rem;
@@ -117,6 +116,11 @@ input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
         box-sizing: border-box
 }
 
+@media (min-width: 768px) {
+     .col-half{
+            float: left;
+     }
+}
 
 
 .clearfix:after {
