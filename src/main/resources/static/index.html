@@ -14,6 +14,7 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/loginCtrl.js"></script>
     <script src="scripts/candidateCtrl.js"></script>
+    <script src="scripts/candidateService.js"></script>
     <script src="scripts/instructionCtrl.js"></script>
     <script src="scripts/translateCtrl.js"></script>
     <script src="scripts/storyCtrl.js"></script>
@@ -21,7 +22,7 @@
 <body>
 <header>
     <div class="header-container">
-        <div class="candidate-container" ng-controller="candidateCtrl">
+        <div class="candidate-container" ng-controller="candidateInfoCtrl">
             <img src="img/boy.svg" ng-show="candidate.gender=='male'" height="25" class="candidate-image"> <img src="img/girl.svg" ng-show="candidate.gender=='female'" height="25" class="candidate-image">
             {{candidate.number}}
         </div>

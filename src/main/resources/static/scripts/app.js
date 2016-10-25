@@ -28,8 +28,8 @@ app.config(function($routeProvider, $translateProvider) {
             templateUrl : 'views/break.html',
             controller : 'storyCtrl',
     }).when('/end', {
-                  templateUrl : 'views/end.html',
-                  controller : 'storyCtrl',
+              templateUrl : 'views/end.html',
+              controller : 'storyCtrl',
     }).otherwise({
       	redirectTo : '/login'
     });

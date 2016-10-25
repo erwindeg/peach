@@ -1,4 +1,4 @@
-app.controller("storyCtrl", function($scope,$http,$location,$routeParams) {
+app.controller("storyCtrl", function($scope,$http,$location,$routeParams,candidateService) {
     $scope.story = {};
     $scope.story.id=$routeParams.id;
     $scope.showAnswers = false;
@@ -15,7 +15,10 @@ app.controller("storyCtrl", function($scope,$http,$location,$routeParams) {
      $scope.resume = function(){
          $location.path("/story/2");
      }
-     $scope.next = function(){
-         $location.path("/candidate");
-     }
+
+
+      $scope.next = function(){
+          candidateService.newCandidate();
+          $location.path("/candidate");
+      }
 });
