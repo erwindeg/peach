@@ -2,6 +2,7 @@
 app.service("candidateService", function($localStorage,$rootScope) {
     this.save = function(candidate){
         $localStorage.candidate = candidate;
+        $rootScope.$broadcast('candidate:updated',{});
     }
 
     this.newCandidate = function(){
